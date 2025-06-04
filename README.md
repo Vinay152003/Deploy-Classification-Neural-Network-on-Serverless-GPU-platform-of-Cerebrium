@@ -1,76 +1,75 @@
-# MNIST Classification - MLOps Take Home Assessment
+# MNIST Classification Neural Network Deployment
 
-This project demonstrates deploying a classification neural network on various platforms, including local deployment and serverless options.
+This project demonstrates the deployment of a classification neural network for handwritten digit recognition on various platforms, including Cerebrium's serverless GPU platform.
 
-## Project Structure
+## Project Overview
 
-- **config.py**: Configuration parameters
-- **load_mnist_local.py**: Code to load the MNIST dataset from local directory
-- **train_model.py**: Script to train the classification model
-- **utils.py**: Utility functions
-- **test_model_confidence.py**: Script to test model confidence with different preprocessing methods
-- **flask_deploy.py**: Deploy the model as a Flask API
-- **gradio_interface.py**: Interactive web interface using Gradio
-- **deployment_options.md**: Documentation of various deployment methods
+- Trained a CNN model on the MNIST dataset achieving 99.04% accuracy
+- Implemented preprocessing techniques that improve confidence on real-world inputs
+- Deployed the model via multiple methods:
+  - Flask REST API for local deployment
+  - Gradio web interface for interactive testing
+  - Cerebrium serverless platform for cloud deployment
 
-## Setup Instructions
+## Repository Structure
 
-1. Install the required dependencies:
+- `config.py`: Configuration parameters
+- `load_mnist_local.py`: Code to load the MNIST dataset
+- `train_model.py`: Script to train the classification model
+- `utils.py`: Utility functions
+- `test_model_confidence.py`: Script to test model confidence with different preprocessing
+- `flask_deploy.py`: Flask API for model deployment
+- `gradio_interface.py`: Interactive web interface using Gradio
+- `cerebrium_deploy/`: Files for Cerebrium serverless deployment
+
+## Setup and Installation
+
+1. Clone this repository
+2. Install dependencies:
    ```
    pip install -r requirements.txt
    ```
-
-2. Train the model (if not already trained):
-   ```
-   python train_model.py
-   ```
-
-3. Test model confidence:
-   ```
-   python test_model_confidence.py
-   ```
-
-4. Deploy with Flask:
-   ```
-   python flask_deploy.py
-   ```
-
-5. Run the Gradio interface:
-   ```
-   python gradio_interface.py
-   ```
+3. Run the desired deployment method:
+   - Flask API: `python flask_deploy.py`
+   - Gradio interface: `python gradio_interface.py`
+   - Cerebrium deployment: See instructions in `FINAL_STEPS.md`
 
 ## Model Performance
 
-The MNIST classifier achieves outstanding performance:
+The MNIST classifier achieves:
 - **Accuracy**: 99.04% on the test set
 - **Confidence**: Near 100% on most test examples
 - **Enhanced Preprocessing**: Improves confidence on edge cases
 
 ![Confidence Comparison](confidence_comparison.png)
 
-### Gradio Interface Results
-
-When testing with real user-uploaded images in the Gradio interface:
-- Successfully classified a digit "8" with 46% confidence
-- Secondary predictions included "3" (25%) and "5" (13%)
-- The model correctly identified the digit despite variations in handwriting style
-
-This real-world testing demonstrates the model's ability to generalize beyond the MNIST dataset, though with lower confidence compared to the test set. This is expected when processing user-drawn or uploaded digits that differ from the training data distribution.
-
 ## Deployment Results
 
-Multiple deployment options have been implemented:
-- **Local Flask API**: Accessible at http://127.0.0.1:5000/predict
-- **Interactive Gradio UI**: Provides a user-friendly drawing interface
-- **Deployment documentation**: Additional options in deployment_options.md
+### Gradio Interface
+The Gradio interface provides an interactive way to test the model with hand-drawn or uploaded digits.
 
-## Project Report
+### Flask API
+The Flask API provides a REST endpoint for making predictions, accessible at http://127.0.0.1:5000/predict
 
-See [project_report.md](project_report.md) for a detailed analysis of the model's performance and deployment strategies.
+### Cerebrium Deployment
+The model was deployed to Cerebrium's serverless platform, allowing for scalable, cloud-based inference.
+
+## Challenges and Solutions
+
+- **Version Compatibility**: Resolved TensorFlow version incompatibilities between local environment and Cerebrium by defining the model architecture directly in the deployment code
+- **Preprocessing Optimization**: Improved prediction confidence by implementing enhanced preprocessing techniques, including thresholding and centering
 
 ## Future Improvements
 
 - Implement additional data augmentation for improved robustness
 - Explore model optimization techniques like quantization
-- Implement a CI/CD pipeline for automated deployment
+- Implement CI/CD pipeline for automated deployment
+
+## Author
+
+[Your Name]
+
+## Acknowledgments
+
+- MTailor for providing this assessment challenge
+- Cerebrium for their serverless ML platform

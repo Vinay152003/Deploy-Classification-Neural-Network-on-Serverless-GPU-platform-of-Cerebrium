@@ -63,7 +63,6 @@ Note: The `.env` file and `__pycache__` directories are not included as they con
 3. Run the desired deployment method:
    - Flask API: `python flask_deploy.py`
    - Gradio interface: `python gradio_interface.py`
-   - Cerebrium deployment: See instructions in `FINAL_STEPS.md`
 
 ## Model Performance
 

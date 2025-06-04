@@ -67,7 +67,7 @@ The model was deployed to Cerebrium's serverless platform, allowing for scalable
 
 ## Author
 
-[Your Name]
+Vinay Hipparge
 
 ## Acknowledgments
 

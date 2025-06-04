@@ -37,6 +37,9 @@ Based on the project requirements, the following files are included in this subm
 - Gradio Interface:
   - `gradio_interface.py` - Interactive web interface
 
+- Dashboard Cerebrium.ai Screenshot
+![image](https://github.com/user-attachments/assets/9b53fee7-6c43-4dea-8022-867bf0a74dff)
+
 - Cerebrium Deployment:
   - `cerebrium_deploy/main.py` - Cerebrium handler function
   - `cerebrium_deploy/cerebrium.toml` - Cerebrium configuration

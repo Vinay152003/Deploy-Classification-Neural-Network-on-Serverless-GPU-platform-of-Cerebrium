@@ -13,14 +13,45 @@ This project demonstrates the deployment of a classification neural network for 
 
 ## Repository Structure
 
-- `config.py`: Configuration parameters
-- `load_mnist_local.py`: Code to load the MNIST dataset
-- `train_model.py`: Script to train the classification model
-- `utils.py`: Utility functions
-- `test_model_confidence.py`: Script to test model confidence with different preprocessing
-- `flask_deploy.py`: Flask API for model deployment
-- `gradio_interface.py`: Interactive web interface using Gradio
-- `cerebrium_deploy/`: Files for Cerebrium serverless deployment
+## Files Included in This Repository
+
+Based on the project requirements, the following files are included in this submission:
+
+### Core Python Files
+- `config.py` - Configuration parameters
+- `load_mnist_local.py` - Loads MNIST dataset from local directory
+- `train_model.py` - Trains the classification neural network
+- `utils.py` - Utility functions
+- `requirements.txt` - Dependencies list
+
+### Testing and Evaluation
+- `test_model_confidence.py` - Tests model confidence with different preprocessing methods
+- `test_flask_client.py` - Client script to test Flask API
+- `test_inference.py` - Script to test model inference
+- `confidence_comparison.png` - Visual comparison of preprocessing techniques
+
+### Deployment Files
+- Flask Deployment:
+  - `flask_deploy.py` - Local Flask API deployment
+
+- Gradio Interface:
+  - `gradio_interface.py` - Interactive web interface
+
+- Cerebrium Deployment:
+  - `cerebrium_deploy/main.py` - Cerebrium handler function
+  - `cerebrium_deploy/cerebrium.toml` - Cerebrium configuration
+  - `deploy_cerebrium.py` - Original deployment script
+  - `setup_cerebrium_deployment.py` - Helper script for setup
+  - `simple_cerebrium_test.py` - Simplified test script
+
+### Model Files
+- `models/mnist_classifier.h5` - The trained model file
+
+### Other Essential Files
+- `.gitignore` - Specifies files to ignore in Git
+- `training_history.png` - Training history visualization
+
+Note: The `.env` file and `__pycache__` directories are not included as they contain sensitive information or temporary files.
 
 ## Setup and Installation
 
@@ -41,7 +72,8 @@ The MNIST classifier achieves:
 - **Confidence**: Near 100% on most test examples
 - **Enhanced Preprocessing**: Improves confidence on edge cases
 
-![Confidence Comparison](confidence_comparison.png)
+![Confidence Comparison](![confidence_comparison](https://github.com/user-attachments/assets/836b6b4c-fd4e-4317-892c-015a6a2fdfef)
+)
 
 ## Deployment Results
 

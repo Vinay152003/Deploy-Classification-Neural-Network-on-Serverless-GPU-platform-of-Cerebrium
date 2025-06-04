@@ -78,6 +78,8 @@ The MNIST classifier achieves:
 
 ### Gradio Interface
 The Gradio interface provides an interactive way to test the model with hand-drawn or uploaded digits.
+![image](https://github.com/user-attachments/assets/35bca163-c704-468c-a12d-346a414af877)
+
 
 ### Flask API
 The Flask API provides a REST endpoint for making predictions, accessible at http://127.0.0.1:5000/predict

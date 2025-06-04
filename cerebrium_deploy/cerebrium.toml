@@ -1,0 +1,21 @@
+[cerebrium.deployment]
+name = "mnist-classifier"
+python_version = "3.10"
+include = ["./*", "main.py", "cerebrium.toml"]
+exclude = [".*", "__pycache__/", "venv/"]
+
+[cerebrium.hardware]
+cpu = 2
+memory = 4.0
+compute = "CPU"  # Use "GPU" if GPU acceleration is needed
+
+[cerebrium.scaling]
+min_replicas = 0
+max_replicas = 2
+cooldown = 10
+
+[cerebrium.dependencies.pip]
+tensorflow = "2.15.0"
+numpy = "1.24.3"
+scipy = "1.10.1"
+pillow = "9.5.0"
